@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="max-w-lg mx-auto bg-gray-100 p-4 shadow">
+      <form id="imc-form">
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <label for="input-height" class="text-sm text-gray-700">Altura(m)</label>
+            <input
+              type="text"
+              id="input-height"
+              class="bg-gray-50 border border-gray-300 text-gray-700 text-sm p-2"
+              placeholder="1.70"
+            />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label for="input-weight" class="text-sm text-gray-900">Peso(kg)</label>
+            <input
+              type="text"
+              id="input-weight"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm p-2"
+              placeholder="75.8"
+            />
+          </div>
+          <button type="submit" class="bg-blue-500 text-white text-sm p-2.5 w-full rounded hover:bg-blue-700">Calcular</button>
+        </div>
+      </form>
+      <table id="imc-table" class="mt-4 divide-y w-full bg-white">
+        <thead>
+          <tr class="text-sm text-left text-blue-800 uppercase">
+            <th class="p-3">imc</th>
+            <th class="p-3">classificação</th>
+            <th class="text-center">obesidade<span class="text-xs">(grau)</span></th>
+          </tr>
+        </thead>
+        <tbody class="divide-y"></tbody>
+      </table>
+      <div id="imc-result" class="mt-2.5 bg-orange-700 text-white p-4 text-center">SEU IMC</div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
